@@ -1,0 +1,52 @@
+<!--
+  PARAMETERS:
+
+  resultFileName - name and location of the file where result will be saved
+  originalFileName - name of the file which you want to be base for the mosaic
+  picturesDirectory - directory where all little pictures are stored (those picture will be used for mosaic)
+  numberOfPictures - how many pictures should be on the diagnal - the more the smaller pictures will be but the resulting image will be better
+  minimumDistanceOfRepetitions - if small picture repeats itself - what is the minimum distance between repetitions
+  scale - how many times the result mosaic widht and hight should be bigger then the original
+  speed - how much faster (less acurate) should the algorithm work; 1: compare every pixel, 2 compare average of squares 2x2, etc
+  morphFactor - final touch, how many percent should the image be morhed into original; 0: no morphing, 0.25: - 25% morphing (recommended), 1: 100% - will look like resized original
+  logFile - where to log progress; ommit this attribute for no logging, leave it empty "" for screen, or specify filename
+-->
+
+<mosaic
+  resultFileName="C:/docs/projects/java/JPEGTools_v2.0/home/Vicky playground 2000x1500_hex_mosaic.jpg"
+  originalFileName="C:/docs/projects/java/JPEGTools_v2.0/home/Vicky playground 2000x1500.jpg"
+  picturesDirectory="C:/Photos_Hexed_137x118"
+  hexLength="22"
+  minimumDistanceOfRepetitions="10"
+  scale="1"
+  speed="5"
+  morphFactor="0.25"
+  similarityFraction="0.01"
+  logFile="C:/docs/projects/java/JPEGTools_v2.0/home/Vicky playground 2000x1500_hex_mosaic.log"
+/>
+
+<!--
+  BEST RESULTS ADVICE:
+
+  Here is an example of settings which I have found to work very good for my needs.
+  You can try those settings and then play with changing different parameters to get the effect you need.
+
+  Print size (I recommend to use photo lab to print final mosaic): 		10 x 8
+  Print PPI (or DPI): 								300
+  Aspect ratio (standard for computer screen and digital camera pictures): 	.75 
+  Final print size in pixels:							3000 x 2250
+  Final print size in inches:							10 x 7.5
+
+  Number of small pictures on diagnal:						50
+  Total number of small pictures:						50 * 50 = 2500
+  Size of small picture in pixels						60 x 45
+  Size of small picture in inches						0.20 x 0.15
+
+  Size of original:								1024 x 768
+  Scale:									2250 / 768 = 3000 / 1024 = 2.9296875
+  Speed (the average of 5x5 square gives 12 x 9 points of comparison):		5
+  Morph Factor (more will blure the little pictures, less won't have effect): 	0.25
+
+  TO INCREASE SPEED OF GENERATING MOSAIC, RESIZE ALL PICTURES TO FINAL RESOLUTION
+  REMEMBER TO SAVE ORIGINALS - DO NOT OVERWRITE ORIGINALS
+-->

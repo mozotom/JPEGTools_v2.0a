@@ -1,0 +1,1 @@
+call ImageToolkit.bat C:/Photos_Hexed/FamilyAlbum_05 C:/Photos_Hexed_137x118/FamilyAlbum_05 137 118

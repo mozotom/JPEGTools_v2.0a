@@ -1,0 +1,1 @@
+call MosaicMaker.bat cleo_vicky_2250x1800_20x16.xml
